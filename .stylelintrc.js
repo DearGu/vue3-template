@@ -1,14 +1,14 @@
 module.exports = {
-  extends: 'stylelint-config-standard',
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   rules: {
-    indentation: 4,
+    indentation: 2,
     'selector-pseudo-element-no-unknown': [
       true,
       {
         ignorePseudoElements: ['v-deep'],
       },
     ],
-    'number-leading-zero': 'never',
+    'number-leading-zero': 'always',
     'no-descending-specificity': null,
     'font-family-no-missing-generic-family-keyword': null,
     'selector-type-no-unknown': null,
@@ -18,6 +18,12 @@ module.exports = {
     'selector-pseudo-class-no-unknown': [
       true,
       { ignorePseudoClasses: ['global'] },
+    ],
+    'max-nesting-depth': [
+      3,
+      {
+        ignore: ['blockless-at-rules', 'pseudo-classes'],
+      },
     ],
   },
 };
