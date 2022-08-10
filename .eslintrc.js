@@ -7,11 +7,11 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   extends: [
-    'eslint:recommended',
+    // 'eslint:recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'prettier',
+    // 'prettier',
   ],
   parserOptions: {
     ecmaVersion: 12,
