@@ -21,15 +21,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['vue', '@typescript-eslint', 'prettier'],
+  plugins: ['vue', '@typescript-eslint', 'prettier', 'import'],
   rules: {
+    camelcase: 'error',
     'no-var': 'error',
     allowEmptyCatch: 'off',
     'prettier/prettier': 'error',
     'prefer-const': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
     'no-empty': ['error', { allowEmptyCatch: true }],
     'vue/no-unused-vars': [
       'error',
@@ -45,6 +43,26 @@ module.exports = {
       },
     ],
     'vue/no-v-html': 'off',
+    'max-lines': [
+      'warn',
+      {
+        max: 800,
+        skipBlankLines: true,
+        skipComments: true,
+      },
+    ],
+    'import/newline-after-import': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: ['interface', 'typeAlias', 'enum', 'class'],
+        format: ['StrictPascalCase'],
+      },
+    ],
+    '@typescript-eslint/consistent-type-imports': 'error',
   },
   globals: {
     defineProps: 'readonly',
