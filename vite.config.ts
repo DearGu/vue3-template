@@ -1,4 +1,6 @@
+import legacy from '@vitejs/plugin-legacy';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import path from 'path';
 import { defineConfig } from 'vite';
 import eslintPlugin from 'vite-plugin-eslint';
@@ -10,6 +12,8 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    vueJsx(),
+    legacy(),
     eslintPlugin({
       include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
     }),
