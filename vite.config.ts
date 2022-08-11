@@ -10,6 +10,10 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@', replacement: path.resolve('src') }],
   },
+  build: {
+    target: 'es2015',
+    sourcemap: true,
+  },
   plugins: [
     vue({
       reactivityTransform: true,
