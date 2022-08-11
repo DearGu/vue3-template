@@ -20,10 +20,20 @@ module.exports = {
       { ignorePseudoClasses: ['global'] },
     ],
     'max-nesting-depth': [
-      3,
+      2,
       {
         ignore: ['blockless-at-rules', 'pseudo-classes'],
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.less', '**/*.less'],
+      customSyntax: 'postcss-less',
+    },
+    {
+      files: ['*.vue', '**/*.vue'],
+      customSyntax: 'postcss-html',
+    },
+  ],
 };

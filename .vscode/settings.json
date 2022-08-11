@@ -8,6 +8,7 @@
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
+  "stylelint.validate": ["css", "less", "postcss", "vue"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
