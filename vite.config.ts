@@ -11,7 +11,9 @@ export default defineConfig({
     alias: [{ find: '@', replacement: path.resolve('src') }],
   },
   plugins: [
-    vue(),
+    vue({
+      reactivityTransform: true,
+    }),
     vueJsx(),
     legacy(),
     eslintPlugin({
