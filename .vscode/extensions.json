@@ -3,6 +3,7 @@
     "Vue.volar",
     "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "mikestead.dotenv"
   ]
 }
