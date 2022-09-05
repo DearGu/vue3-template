@@ -43,6 +43,11 @@ module.exports = {
       },
     ],
     'vue/no-v-html': 'off',
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      { registeredComponentsOnly: false },
+    ],
     'max-lines': [
       'warn',
       {

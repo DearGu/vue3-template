@@ -25,6 +25,7 @@ module.exports = {
         ignore: ['blockless-at-rules', 'pseudo-classes'],
       },
     ],
+    'selector-no-vendor-prefix': null,
   },
   overrides: [
     {
