@@ -1,7 +1,6 @@
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   rules: {
-    indentation: 2,
     'selector-pseudo-element-no-unknown': [
       true,
       {
@@ -15,6 +14,8 @@ module.exports = {
     'at-rule-no-unknown': null,
     'no-duplicate-selectors': null,
     'no-empty-source': null,
+    'selector-class-pattern': null,
+    'function-no-unknown': null,
     'selector-pseudo-class-no-unknown': [
       true,
       { ignorePseudoClasses: ['global'] },
@@ -25,7 +26,13 @@ module.exports = {
         ignore: ['blockless-at-rules', 'pseudo-classes'],
       },
     ],
-    'selector-no-vendor-prefix': null,
+    'value-no-vendor-prefix': [
+      true,
+      {
+        ignoreValues: ['box'],
+      },
+    ],
+    'selector-pseudo-class-no-unknown': null,
   },
   overrides: [
     {

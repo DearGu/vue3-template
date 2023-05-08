@@ -8,10 +8,10 @@ module.exports = {
   parser: 'vue-eslint-parser',
   extends: [
     // 'eslint:recommended',
-    'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    // 'prettier',
+    'plugin:vue/vue3-recommended',
+    // 'plugin:prettier/recommended',
+    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 12,
@@ -21,12 +21,11 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['vue', '@typescript-eslint', 'prettier', 'import'],
+  plugins: ['vue', '@typescript-eslint', 'import'],
   rules: {
     camelcase: 'error',
     'no-var': 'error',
     allowEmptyCatch: 'off',
-    'prettier/prettier': 'error',
     'prefer-const': 'error',
     'no-empty': ['error', { allowEmptyCatch: true }],
     'vue/no-unused-vars': [
@@ -43,11 +42,7 @@ module.exports = {
       },
     ],
     'vue/no-v-html': 'off',
-    'vue/component-name-in-template-casing': [
-      'error',
-      'kebab-case',
-      { registeredComponentsOnly: false },
-    ],
+    'vue/no-setup-props-destructure': 'off',
     'max-lines': [
       'warn',
       {
